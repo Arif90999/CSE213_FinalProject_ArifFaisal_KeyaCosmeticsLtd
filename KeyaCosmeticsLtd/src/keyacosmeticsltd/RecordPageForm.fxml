@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keyacosmeticsltd.RecordPageFormController">
+   <children>
+      <AnchorPane fx:id="recordpage_mainForm" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="21.0" styleClass="header-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Finance Accounts">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="recordpage_search" layoutX="568.0" layoutY="14.0" prefHeight="30.0" prefWidth="218.0" promptText="Search" styleClass="search" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            <FontAwesomeIcon fill="#d3d3d3" glyphName="SEARCH" layoutX="575.0" layoutY="35.0" size="1.5em" wrappingWidth="18.0" AnchorPane.rightAnchor="207.0" AnchorPane.topAnchor="19.571428298950195" />
+            <TableView fx:id="recordpage_tableView" layoutX="17.0" layoutY="81.0" prefHeight="402.0" prefWidth="766.0" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="81.0">
+              <columns>
+                <TableColumn fx:id="recordpage_col_faID" prefWidth="125.0" text="Finance Accounts ID" />
+                <TableColumn fx:id="recordpage_col_name" prefWidth="45.0" text="Name" />
+                  <TableColumn fx:id="recordpage_col_gender" prefWidth="53.0" text="Gender" />
+                  <TableColumn fx:id="recordpage_col_mobileNumber" prefWidth="96.0" text="Mobile Number" />
+                  <TableColumn fx:id="recordpage_col_address" prefWidth="82.0" text="Address" />
+                  <TableColumn fx:id="recordpage_col_dateCreated" prefWidth="89.0" text="Date Created" />
+                  <TableColumn fx:id="recordpage_col_dateModified" prefWidth="95.0" text="Date Modified" />
+                  <TableColumn fx:id="recordpage_col_dateDeleted" prefWidth="99.0" text="Date Deleted" />
+                  <TableColumn fx:id="recordpage_col_action" prefWidth="70.0" text="Action" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

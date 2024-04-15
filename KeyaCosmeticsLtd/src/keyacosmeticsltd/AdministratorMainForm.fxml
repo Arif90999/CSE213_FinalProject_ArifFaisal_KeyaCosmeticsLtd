@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1143.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keyacosmeticsltd.AdministratorMainFormController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="55.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="40.0" prefWidth="1100.0" stylesheets="@../design/MainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-2.0" layoutY="-93.0" prefHeight="40.0" prefWidth="217.0" styleClass="bg-color-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="53.0" layoutY="11.0" text="Keya Cosmetics Ltd" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Circle fx:id="top_profile" fill="#4d69ff" layoutX="1003.0" layoutY="21.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="85.0" />
+                        <Label layoutX="1025.0" layoutY="14.0" text="Active" AnchorPane.rightAnchor="42.0" />
+                        <Circle fill="#09cd20" layoutX="1072.0" layoutY="23.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="23.0" />
+                        <Label layoutX="802.0" layoutY="14.0" text="Welcome," AnchorPane.rightAnchor="245.0" />
+                        <Label fx:id="top_username" layoutX="874.0" layoutY="14.0" text="ArifFaisal" AnchorPane.rightAnchor="178.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date_time" alignment="CENTER_RIGHT" layoutX="516.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" stylesheets="@../design/MainFormDesign.css" text="MM:DD:YYYY" AnchorPane.rightAnchor="403.0" />
+                        <Label fx:id="current_form" layoutX="239.0" layoutY="10.0" prefHeight="21.0" prefWidth="222.0" styleClass="header-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Dashboard Form" AnchorPane.leftAnchor="239.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="border-top" />
+                     </styleClass>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="560.0" prefWidth="215.0" styleClass="bg-color-2" stylesheets="@../design/AdministratorMainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="84.0" layoutY="65.0" size="5em" />
+                        <Label layoutX="16.0" layoutY="84.0" text="Administrator ID :" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nav_adminID" layoutX="125.0" layoutY="84.0" prefHeight="19.0" prefWidth="62.0" text="1" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="110.0" text="Full Name :" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nav_username" layoutX="91.0" layoutY="110.0" prefHeight="19.0" prefWidth="95.0" text="ariffaisal" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="110.0" layoutY="145.0" startX="-100.0" stroke="WHITE" />
+                        <FontAwesomeIcon fill="#903cd0" glyphName="COFFEE" layoutX="44.0" layoutY="552.0" size="10em" AnchorPane.bottomAnchor="8.857139587402344" AnchorPane.leftAnchor="44.0" />
+                        <Label layoutX="15.0" layoutY="153.0" text="Feature" textFill="WHITE" />
+                        <Button fx:id="dashboard_btn" layoutX="7.0" layoutY="179.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="200.0" styleClass="nav-btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Dashboard" textAlignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIcon fill="#110065" glyphName="DASHBOARD" size="1.5em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="financeAccounts_btn" layoutX="7.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="200.0" styleClass="nav-btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Finance &amp; Accounts">
+                           <graphic>
+                              <FontAwesomeIcon fill="#110065" glyphName="USERS" size="1.5em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="appointments_btn" layoutX="7.0" layoutY="273.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="200.0" styleClass="nav-btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Appointments">
+                           <graphic>
+                              <FontAwesomeIcon fill="#110065" glyphName="CLIPBOARD" size="1.5em" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="21.0" layoutY="332.0" text="Profile" textFill="WHITE" />
+                        <Button fx:id="profile_btn" layoutX="8.0" layoutY="357.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="200.0" styleClass="nav-btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Profile Setting">
+                           <graphic>
+                              <FontAwesomeIcon fill="#110065" glyphName="COG" size="1.5em" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="560.0" prefWidth="892.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_form" layoutX="76.0" layoutY="80.0" prefHeight="560.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="152.0" prefWidth="857.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="9.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <ScrollPane layoutX="7.0" layoutY="-6.0" prefHeight="194.0" prefWidth="857.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <AnchorPane prefHeight="149.0" prefWidth="861.0">
+                                             <children>
+                                                <AnchorPane fx:id="dashboard_AD" layoutX="33.0" layoutY="12.0" prefHeight="123.0" prefWidth="209.0" stylesheets="@../design/AdministratorMainFormDesign.css">
+                                                   <styleClass>
+                                                      <String fx:value="bg-color-2" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="USER_MD" layoutX="14.0" layoutY="82.0" size="5em" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="93.0" layoutY="21.0" prefHeight="20.0" prefWidth="104.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="77.0" layoutY="91.0" text="Active Administrator" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="dashboard_TP" layoutX="288.0" layoutY="12.0" prefHeight="123.0" prefWidth="209.0" stylesheets="@../design/AdministratorMainFormDesign.css">
+                                                   <styleClass>
+                                                      <String fx:value="bg-color-2" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="14.0" layoutY="82.0" size="5em" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="93.0" layoutY="21.0" prefHeight="20.0" prefWidth="104.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="77.0" layoutY="91.0" text="Total Finance" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="dashboard_AP" layoutX="543.0" layoutY="12.0" prefHeight="123.0" prefWidth="209.0" stylesheets="@../design/AdministratorMainFormDesign.css">
+                                                   <styleClass>
+                                                      <String fx:value="bg-color-2" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="82.0" size="5em" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="93.0" layoutY="21.0" prefHeight="20.0" prefWidth="104.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="77.0" layoutY="91.0" text="Active Finance" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="dashboard_tA" layoutX="793.0" layoutY="12.0" prefHeight="123.0" prefWidth="209.0" stylesheets="@../design/AdministratorMainFormDesign.css">
+                                                   <styleClass>
+                                                      <String fx:value="bg-color-2" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="82.0" size="5em" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="93.0" layoutY="21.0" prefHeight="20.0" prefWidth="104.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="77.0" layoutY="91.0" text="Total Appointment" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="182.0" prefHeight="361.0" prefWidth="857.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="182.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="484.0" layoutY="10.0" prefHeight="183.0" prefWidth="366.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="168.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AreaChart fx:id="dashboad_chart_PD" layoutX="-204.0" layoutY="-143.0" prefHeight="183.0" prefWidth="366.0" title="Finance &amp; Account's Data" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="481.0" layoutY="219.0" prefHeight="139.0" prefWidth="366.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="10.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <BarChart fx:id="dashboad_chart_DD" layoutX="-1.0" layoutY="-6.0" prefHeight="150.0" prefWidth="367.0" title="Administrator's Data" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="335.0" prefWidth="451.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="392.0" AnchorPane.topAnchor="14.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="header-1" stylesheets="@../design/MainFormDesign.css" text="Administrator Information">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="dashboad_tableView" layoutX="14.0" layoutY="43.0" prefHeight="279.0" prefWidth="426.0" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="43.0">
+                                             <columns>
+                                                <TableColumn fx:id="dashboad_col_administratorID" prefWidth="111.0" text="Administrator ID" />
+                                                <TableColumn fx:id="dashboad_col_name" prefWidth="131.0" text="Name" />
+                                                <TableColumn fx:id="dashboad_col_specialized" prefWidth="103.0" text="Specialized" />
+                                                <TableColumn fx:id="dashboad_col_status" text="Status" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="FA_form" layoutX="10.0" layoutY="10.0" prefHeight="560.0" prefWidth="885.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                           <children>
+                              <AnchorPane layoutX="6.0" layoutY="7.0" prefHeight="548.0" prefWidth="479.0" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="422.0" AnchorPane.topAnchor="7.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" styleClass="header-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Finance &amp; Account Information">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="60.0" text="Finance/Accounts ID:" />
+                                    <TextField fx:id="fa_faID" layoutX="27.0" layoutY="84.0" prefHeight="25.0" prefWidth="408.0" promptText="EX : 100001" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="84.0" />
+                                    <Label layoutX="27.0" layoutY="119.0" text="Finance/Accounts Name:" />
+                                    <TextField fx:id="fa_faName" layoutX="27.0" layoutY="144.0" prefHeight="25.0" prefWidth="408.0" promptText="EX : Arif Faisal" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="144.0" />
+                                    <Label layoutX="29.0" layoutY="179.0" text="Gender" />
+                                    <ComboBox fx:id="fa_gender" layoutX="27.0" layoutY="205.0" prefHeight="25.0" prefWidth="408.0" promptText="Select Gender" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="205.0" />
+                                    <Label layoutX="28.0" layoutY="243.0" text="Mobile Number :" />
+                                    <TextField fx:id="fa_mobileNumber" layoutX="28.0" layoutY="267.0" prefHeight="25.0" prefWidth="408.0" promptText="EX : 01XXXXXXXXX" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="267.0" />
+                                    <Label layoutX="27.0" layoutY="302.0" text="Password :" />
+                                    <TextField fx:id="fa_password" layoutX="28.0" layoutY="328.0" prefHeight="25.0" prefWidth="408.0" promptText="Password" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="328.0" />
+                                    <Label layoutX="27.0" layoutY="360.0" text="Address :" />
+                                    <TextArea fx:id="fa_address" layoutX="27.0" layoutY="381.0" prefHeight="88.0" prefWidth="408.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="381.0" />
+                                    <Button fx:id="fa_confirmBtn" layoutX="89.0" layoutY="486.0" mnemonicParsing="false" onAction="#faConfirmBtn" prefHeight="40.0" prefWidth="287.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Confirm" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="119.0" />
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="507.0" layoutY="7.0" prefHeight="188.0" prefWidth="386.0" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="23.0" styleClass="header-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Finance &amp; Account Profile">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="22.0" layoutY="77.0" text="Finance/Accounts ID:" />
+                                    <Label fx:id="fa_FA_faID" layoutX="142.0" layoutY="77.0" />
+                                    <Label layoutX="78.0" layoutY="109.0" text="Password :" />
+                                    <Label fx:id="fa_FA_password" layoutX="141.0" layoutY="109.0" />
+                                    <Label layoutX="58.0" layoutY="143.0" text="Date Created :" />
+                                    <Label fx:id="fa_FA_dateCreated" layoutX="142.0" layoutY="143.0" />
+                                    <FontAwesomeIcon fill="#903cd0" glyphName="USER" layoutX="270.0" layoutY="151.0" opacity="0.28" size="10em" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="505.0" layoutY="214.0" prefHeight="334.0" prefWidth="388.0" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="210.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="22.0" styleClass="header-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Finance &amp; Account Information">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="77.0" text="Finance/Accounts Name :" />
+                                    <Label fx:id="fa_FA_faName" layoutX="153.0" layoutY="77.0" />
+                                    <Label layoutX="105.0" layoutY="109.0" text="Gender :" />
+                                    <Label fx:id="fa_FA_gender" layoutX="153.0" layoutY="109.0" />
+                                    <Label layoutX="60.0" layoutY="143.0" text="Mobile Number :" />
+                                    <Label fx:id="fa_FA_mobileNumber" layoutX="153.0" layoutY="143.0" />
+                                    <Label layoutX="103.0" layoutY="180.0" text="Address :" />
+                                    <Label fx:id="fa_FA_address" layoutX="153.0" layoutY="180.0" />
+                                    <FontAwesomeIcon fill="#903cd0" glyphName="CLIPBOARD" layoutX="254.0" layoutY="300.0" opacity="0.3" size="10em" AnchorPane.bottomAnchor="24.857139587402344" AnchorPane.rightAnchor="14.0" />
+                                    <Button fx:id="fa_FA_addBtn" layoutX="55.0" layoutY="277.0" mnemonicParsing="false" onAction="#faAddBtn" prefHeight="43.0" prefWidth="96.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Add" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="44.0">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="fa_FA_recordBtn" layoutX="249.0" layoutY="277.0" mnemonicParsing="false" onAction="#faRecordBtn" prefHeight="43.0" prefWidth="96.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Record" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="43.0">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="appointments_form" layoutX="8.0" layoutY="9.0" prefHeight="569.0" prefWidth="909.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="9.0">
+                           <children>
+                              <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="554.0" prefWidth="925.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-22.0" AnchorPane.topAnchor="5.0">
+                                 <children>
+                                    <AnchorPane layoutX="-3.0" layoutY="-4.0" prefHeight="262.0" prefWidth="905.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="296.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="-4.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="177.0" styleClass="header-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Appointments">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="appointments_tableView" layoutX="13.0" layoutY="46.0" onMouseClicked="#appointmentSelect" prefHeight="209.0" prefWidth="885.0" stylesheets="@../design/AdministratorMainFormDesign.css" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="46.0">
+                                             <columns>
+                                                <TableColumn fx:id="appointments_col_appointmentID" prefWidth="97.0" text="Appointment ID" />
+                                                <TableColumn fx:id="appointments_col_name" prefWidth="77.0" text="Name" />
+                                                <TableColumn fx:id="appointments_col_gender" prefWidth="65.0" text="Gender" />
+                                                <TableColumn fx:id="appointments_col_contactNumber" prefWidth="84.0" text="Contact" />
+                                                <TableColumn fx:id="appointments_col_description" prefWidth="100.0" text="Description" />
+                                                <TableColumn fx:id="appointments_col_date" prefWidth="62.0" text="Date" />
+                                                <TableColumn fx:id="appointments_col_dateModify" prefWidth="96.0" text="Date Modify" />
+                                                <TableColumn fx:id="appointments_col_dateDelete" minWidth="0.0" prefWidth="105.0" text="Date Delete" />
+                                                <TableColumn fx:id="appointments_col_status" minWidth="0.0" prefWidth="76.0" text="Status" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="2.0" layoutY="286.0" prefHeight="280.0" prefWidth="905.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="23.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="33.0" layoutY="29.0" text="Appointment ID :" />
+                                          <TextField fx:id="appointment_appointmentID" layoutX="133.0" layoutY="25.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="86.0" layoutY="69.0" text="Name :" />
+                                          <TextField fx:id="appointment_name" layoutX="133.0" layoutY="65.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="79.0" layoutY="105.0" text="Gender :" />
+                                          <ComboBox fx:id="appointment_gender" layoutX="133.0" layoutY="103.0" prefHeight="25.0" prefWidth="150.0" promptText="Choose" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="353.0" layoutY="29.0" text="Description :" />
+                                          <TextField fx:id="appointment_description" layoutX="436.0" layoutY="25.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="373.0" layoutY="69.0" text="Balance :" />
+                                          <TextField fx:id="appointment_balance" layoutX="436.0" layoutY="65.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="353.0" layoutY="105.0" text="Transaction :" />
+                                          <TextField fx:id="appointment_transaction" layoutX="436.0" layoutY="101.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label alignment="TOP_LEFT" layoutX="80.0" layoutY="145.0" text="Mobile :" />
+                                          <TextField fx:id="appointment_mobileNumber" layoutX="133.0" layoutY="141.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="654.0" layoutY="29.0" text="Address :" />
+                                          <TextArea fx:id="appointment_address" layoutX="719.0" layoutY="22.0" prefHeight="48.0" prefWidth="150.0" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Label layoutX="663.0" layoutY="90.0" text="Status :" />
+                                          <ComboBox fx:id="appointment_status" layoutX="719.0" layoutY="86.0" prefHeight="25.0" prefWidth="150.0" promptText="Choose" styleClass="textfield-2" stylesheets="@../design/AdministratorMainFormDesign.css" />
+                                          <Button fx:id="appointment_insertBtn" layoutX="79.0" layoutY="214.0" mnemonicParsing="false" onAction="#appointmentInsertBtn" prefHeight="35.0" prefWidth="102.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Insert" />
+                                          <Button fx:id="appointment_updateBtn" layoutX="209.0" layoutY="214.0" mnemonicParsing="false" onAction="#appointmentUpdateBtn" prefHeight="35.0" prefWidth="102.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Update" />
+                                          <Button fx:id="appointment_clearBtn" layoutX="365.0" layoutY="214.0" mnemonicParsing="false" onAction="#appointmentClearBtn" prefHeight="35.0" prefWidth="102.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Clear" />
+                                          <Button fx:id="appointment_deleteBtn" layoutX="490.0" layoutY="214.0" mnemonicParsing="false" onAction="#appointmentDeleteBtn" prefHeight="35.0" prefWidth="102.0" styleClass="btn-2" stylesheets="@../design/AdministratorMainFormDesign.css" text="Delete" />
+                                          <DatePicker fx:id="appointment_schedule" layoutX="719.0" layoutY="126.0" prefHeight="25.0" prefWidth="152.0" />
+                                          <Label layoutX="651.0" layoutY="130.0" text="Schedule :" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

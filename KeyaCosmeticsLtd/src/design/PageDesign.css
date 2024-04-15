@@ -1,0 +1,80 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 31, 2024, 12:12:34 AM
+    Author     : Azmary
+*/
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.radius{
+    -fx-background-radius: 6px;
+}
+
+.textfield-1{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-1:focused{
+    -fx-border-color: linear-gradient(to bottom right, #6b63d3, #3d34b5);
+    -fx-border-width: 1px;
+}
+
+.textfield-2{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-2:focused{
+    -fx-border-color: linear-gradient(to bottom right, #a413a1, #64308e);
+    -fx-border-width: 1px;
+}
+
+.textfield-3{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-3:focused{
+    -fx-border-color: linear-gradient(to bottom right, #129e9c, #086168);
+    -fx-border-width: 1px;
+}
+
+
+.btn-1{
+    -fx-background-color: linear-gradient(to bottom right, #6b63d3, #100693);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-1:hover{
+    -fx-background-color: linear-gradient(to bottom right, #6b63d3, #3d34b5);
+}
+
+.btn-2{
+    -fx-background-color: linear-gradient(to bottom right, #a413a1, #64308e);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-2:hover{
+    -fx-background-color: linear-gradient(to bottom right, #c512c5, #67289d);
+}
+
+.btn-3{
+    -fx-background-color: linear-gradient(to bottom right, #129e9c, #086168);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-3:hover{
+    -fx-background-color: linear-gradient(to bottom right, #36c2c0, #086b87);
+}
